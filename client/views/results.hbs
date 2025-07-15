@@ -1,0 +1,18 @@
+<h2>Job Recommendations</h2>
+
+{{#if jobs.length}}
+  <ul>
+    {{#each jobs}}
+      <li>
+        <h3>{{this.title}}</h3>
+        <p>{{this.company}} – {{this.location}}</p>
+        <p>{{this.summary}}</p>
+        <a href="{{this.url}}" target="_blank">View Job</a>
+      </li>
+      <hr />
+    {{/each}}
+  </ul>
+{{else}}
+  <p>No jobs found.</p>
+{{/if}}
+
