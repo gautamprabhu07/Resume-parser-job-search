@@ -1,0 +1,27 @@
+{
+    "name": "Gautam Email",
+    "email": "gautamprabhumit@gmail.com",
+    "phone": "8073870925",
+    "skills": [
+        "java",
+        "javascript",
+        "docker",
+        "python",
+        "c++",
+        "node.js",
+        "git",
+        "css",
+        "react",
+        "express",
+        "sql",
+        "html",
+        "linux"
+    ],
+    "experience": [
+        {
+            "title": "Present Bachelor of Technology",
+            "company": "Computer",
+            "years": null
+        }
+    ]
+}
