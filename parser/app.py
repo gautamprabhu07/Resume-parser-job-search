@@ -1,55 +1,55 @@
-# app.py
-
+from flask import Flask, request, jsonify
 import os
 import json
-import webbrowser
-import streamlit as st
 from resume_parser.extract_text import extract_text
 from resume_parser.extract_entities import extract_entities
 from resume_parser.extract_experience import extract_experience
 
-# Configure Streamlit app layout and title
-st.set_page_config(page_title="📄 AI Resume Parser", layout="centered")
-st.title("📄 AI-Powered Resume Parser")
-st.write("Upload a resume (PDF, DOCX, TXT) to extract structured information using NLP.")
+from flask_cors import CORS
+app = Flask(__name__)
+CORS(app)
 
-# File uploader widget
-uploaded_file = st.file_uploader("Choose a resume file", type=["pdf", "docx", "txt"])
+# Ensure required folders exist
+UPLOAD_DIR = os.path.join(os.path.dirname(__file__), 'resumes')
+OUTPUT_DIR = os.path.join(os.path.dirname(__file__), 'output_json')
+os.makedirs(UPLOAD_DIR, exist_ok=True)
+os.makedirs(OUTPUT_DIR, exist_ok=True)
 
-if uploaded_file:
-    # Ensure folders exist
-    os.makedirs("resumes", exist_ok=True)
-    os.makedirs("output_json", exist_ok=True)
+# Root endpoint for testing
+@app.route("/", methods=["GET"])
+def home():
+    return jsonify({"message": "Resume Parser API is running."}), 200
+
+@app.route("/parse-resume", methods=["POST"])
+def parse_resume():
+    if "resume" not in request.files:
+        return jsonify({"error": "No resume file provided"}), 400
+
+    file = request.files["resume"]
+    if file.filename == "":
+        return jsonify({"error": "Empty filename"}), 400
 
     # Save uploaded file
-    file_path = os.path.join("resumes", uploaded_file.name)
-    with open(file_path, "wb") as f:
-        f.write(uploaded_file.read())
+    filename = file.filename
+    file_path = os.path.join(UPLOAD_DIR, filename)
+    file.save(file_path)
 
-    with st.spinner("🔍 Extracting text from resume..."):
+    try:
+        # Run parsing pipeline
         raw_text = extract_text(file_path)
-
-    with st.spinner("🧠 Parsing structured information..."):
         parsed_data = extract_entities(raw_text)
         parsed_data["experience"] = extract_experience(raw_text)
 
-    # Show output
-    st.subheader("📊 Extracted Resume Information")
-    st.json(parsed_data)
+        # Save JSON output
+        output_filename = os.path.splitext(filename)[0] + ".json"
+        output_path = os.path.join(OUTPUT_DIR, output_filename)
+        with open(output_path, "w", encoding="utf-8") as out_file:
+            json.dump(parsed_data, out_file, indent=4, ensure_ascii=False)
 
-    # Save structured data to JSON file
-    output_filename = os.path.splitext(uploaded_file.name)[0] + ".json"
-    output_path = os.path.join("output_json", output_filename)
-    with open(output_path, "w", encoding="utf-8") as out_file:
-        json.dump(parsed_data, out_file, indent=4, ensure_ascii=False)
+        return jsonify(parsed_data)
 
-    st.success("✅ Resume parsed and saved successfully!")
+    except Exception as e:
+        return jsonify({"error": f"Failed to parse resume: {str(e)}"}), 500
 
-    # Provide download button
-    with open(output_path, "rb") as f:
-        st.download_button("⬇️ Download JSON Output", f, file_name=output_filename, mime="application/json")
-
-    # Search Jobs button appears only after resume is parsed
-    if st.button("🔎 Search Jobs Based on Resume"):
-        st.markdown("Redirecting to job search page...")
-        webbrowser.open_new_tab("http://localhost:5000/search")
+if __name__ == "__main__":
+    app.run(port=8000, debug=True)
