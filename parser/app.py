@@ -2,6 +2,7 @@
 
 import os
 import json
+import webbrowser
 import streamlit as st
 from resume_parser.extract_text import extract_text
 from resume_parser.extract_entities import extract_entities
@@ -47,3 +48,8 @@ if uploaded_file:
     # Provide download button
     with open(output_path, "rb") as f:
         st.download_button("⬇️ Download JSON Output", f, file_name=output_filename, mime="application/json")
+
+    # Search Jobs button appears only after resume is parsed
+    if st.button("🔎 Search Jobs Based on Resume"):
+        st.markdown("Redirecting to job search page...")
+        webbrowser.open_new_tab("http://localhost:5000/search")
