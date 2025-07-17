@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const axios = require('axios');
 const path = require('path');
@@ -6,7 +7,7 @@ const cors = require('cors');
 
 const app = express();
 const PORT = 5000;
-const JOOBLE_API_KEY = 'b4a3b748-a8e9-49a9-8cd3-3a32bad344ac';
+const JOOBLE_API_KEY = process.env.JOOBLE_API_KEY;
 
 // Middleware
 app.use(cors()); // Enable CORS for React frontend
