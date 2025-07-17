@@ -80,7 +80,10 @@ npm run dev                # Runs on http://localhost:5173
 
 <img width="1140" height="482" alt="rs1" src="https://github.com/user-attachments/assets/8f9bced7-9b0b-499e-a0bc-cec0a6511a8b" />
 
-<img width="1237" height="838" alt="r2" src="https://github.com/user-attachments/assets/84213077-b082-46f7-a5d9-8b56a3d96dd5" />
+
+<img width="1053" height="831" alt="image" src="https://github.com/user-attachments/assets/eb01c5aa-3c65-483c-89ca-a719832b661f" />
+
+
 
 <img width="1635" height="827" alt="r3" src="https://github.com/user-attachments/assets/3287cda5-fca4-41d8-9e44-bb783a342f82" />
 
