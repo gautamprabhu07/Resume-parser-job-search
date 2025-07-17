@@ -3,19 +3,19 @@
     "email": "gautamprabhumit@gmail.com",
     "phone": "8073870925",
     "skills": [
-        "react",
-        "git",
-        "sql",
-        "java",
-        "python",
-        "javascript",
-        "linux",
-        "node.js",
         "docker",
-        "express",
-        "c++",
         "css",
-        "html"
+        "git",
+        "c++",
+        "node.js",
+        "express",
+        "linux",
+        "javascript",
+        "java",
+        "sql",
+        "html",
+        "python",
+        "react"
     ],
     "experience": [
         {
