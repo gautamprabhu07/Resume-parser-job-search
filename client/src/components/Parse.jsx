@@ -123,26 +123,30 @@ const Parse = () => {
           )}
         </section>
 
+        {/* Parsed JSON container */}
         {parsedData && (
           <section className="bg-gray-50 border border-gray-300 rounded-lg p-6 overflow-auto max-h-96">
             <h2 className="text-xl font-semibold mb-4 text-indigo-700">Parsed Resume Data</h2>
             <pre className="whitespace-pre-wrap text-gray-700 text-sm">{JSON.stringify(parsedData, null, 2)}</pre>
-
-            <div className="mt-6 flex gap-4 justify-end">
-              <button
-                onClick={downloadJSON}
-                className="bg-indigo-600 hover:bg-indigo-700 text-white py-2 px-5 rounded-lg shadow-md transition font-semibold"
-              >
-                Download JSON
-              </button>
-              <button
-                onClick={() => navigate('/jobs')}
-                className="bg-pink-600 hover:bg-pink-700 text-white py-2 px-5 rounded-lg shadow-md transition font-semibold"
-              >
-                Search Jobs
-              </button>
-            </div>
           </section>
+        )}
+
+        {/* Buttons outside parsed JSON container */}
+        {parsedData && (
+          <div className="mt-6 flex gap-4 justify-end max-w-3xl w-full">
+            <button
+              onClick={downloadJSON}
+              className="bg-indigo-600 hover:bg-indigo-700 text-white py-2 px-5 rounded-lg shadow-md transition font-semibold"
+            >
+              Download JSON
+            </button>
+            <button
+              onClick={() => navigate('/jobs')}
+              className="bg-pink-600 hover:bg-pink-700 text-white py-2 px-5 rounded-lg shadow-md transition font-semibold"
+            >
+              Search Jobs
+            </button>
+          </div>
         )}
       </main>
     </div>
