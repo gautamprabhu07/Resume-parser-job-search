@@ -1,10 +1,10 @@
 {
   "name": "resparse",
   "version": "1.0.0",
-  "main": "app.cjs",
+  "main": "app.mjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-     "start": "node app.cjs"
+     "start": "node app.mjs"
   },
   "type": "module",
   "keywords": [],
