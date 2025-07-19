@@ -29,7 +29,7 @@ const Parse = () => {
     formData.append('resume', file);
 
     try {
-      const response = await axios.post('http://localhost:8000/parse-resume', formData, {
+      const response = await axios.post('https://resume-parser-job-search.onrender.com/parse-resume', formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
         onUploadProgress: progressEvent => {
           const percent = Math.round((progressEvent.loaded * 100) / progressEvent.total);

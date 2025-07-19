@@ -14,44 +14,30 @@ app.use(cors()); // Enable CORS for React frontend
 app.use(express.json()); // Parse JSON bodies
 
 // POST /jobs → Fetch jobs based on latest parsed resume
+// Replace this whole block where you're reading local JSON:
+const output = await axios.post('https://resume-parser-job-search.onrender.com/parse-resume', formData);
+
+// Instead, just do this to get the latest parsed resume data:
 app.post('/jobs', async (req, res) => {
-  const outputDir = path.join(__dirname, 'parser/output_json');
-
-  // Get latest parsed JSON file
-  const files = fs.readdirSync(outputDir)
-    .filter(f => f.endsWith('.json'))
-    .map(f => ({ file: f, time: fs.statSync(path.join(outputDir, f)).mtime }))
-    .sort((a, b) => b.time - a.time);
-
-  if (files.length === 0) {
-    return res.status(404).json({ error: 'No parsed resume found.' });
-  }
-
-  const latestFile = files[0].file;
-  const resumePath = path.join(outputDir, latestFile);
-
-  let keywords = 'developer'; // fallback
   try {
-    const resumeData = JSON.parse(fs.readFileSync(resumePath, 'utf-8'));
-    if (resumeData.skills && resumeData.skills.length > 0) {
-      keywords = resumeData.skills.join(', ');
+    // Ideally you'd pass a resume again or use stored ID/session, but for now we'll simulate
+    const parsedData = req.body; // expect parsed data to be sent from frontend
+
+    let keywords = 'developer';
+    if (parsedData.skills && parsedData.skills.length > 0) {
+      keywords = parsedData.skills.join(', ');
     }
-  } catch (err) {
-    console.error('Failed to read resume JSON:', err);
-    return res.status(500).json({ error: 'Failed to read resume data.' });
-  }
 
-  // Send request to Jooble API
-  const joobleURL = `https://jooble.org/api/${JOOBLE_API_KEY}`;
-  try {
+    const joobleURL = `https://jooble.org/api/${JOOBLE_API_KEY}`;
     const { data } = await axios.post(joobleURL, {
       keywords,
       location: 'India',
     });
+
     res.json(data.jobs || []);
   } catch (err) {
     console.error('Jooble API error:', err.message);
-    res.status(500).json({ error: 'Failed to fetch jobs from Jooble API.' });
+    res.status(500).json({ error: 'Failed to fetch jobs.' });
   }
 });
 
