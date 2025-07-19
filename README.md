@@ -54,7 +54,6 @@ JOOBLE_API_KEY=your_jooble_api_key
 
 ##  Installation & Setup
 
-### 1. Clone the repo
 
 ```bash
 git clone https://github.com/your-username/resparse.git
@@ -74,14 +73,14 @@ cd client
 npm install
 npm run dev                # Runs on http://localhost:5173
 ```
---
+---
 
 ## UI Preview
 
 <img width="1140" height="482" alt="rs1" src="https://github.com/user-attachments/assets/8f9bced7-9b0b-499e-a0bc-cec0a6511a8b" />
 
 
-<img width="1053" height="831" alt="image" src="https://github.com/user-attachments/assets/eb01c5aa-3c65-483c-89ca-a719832b661f" />
+![WhatsApp Image 2025-07-19 at 1 02 21 PM](https://github.com/user-attachments/assets/a3205a9f-027d-42d3-8b6a-fbbb31bb751f)
 
 
 
