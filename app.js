@@ -1,29 +1,22 @@
-require('dotenv').config();
-const express = require('express');
-const axios = require('axios');
-const path = require('path');
-const fs = require('fs');
-const cors = require('cors');
+import 'dotenv/config';
+import express from 'express';
+import axios from 'axios';
+import cors from 'cors';
 
 const app = express();
 const PORT = 5000;
 const JOOBLE_API_KEY = process.env.JOOBLE_API_KEY;
 
 // Middleware
-app.use(cors()); // Enable CORS for React frontend
-app.use(express.json()); // Parse JSON bodies
+app.use(cors());
+app.use(express.json());
 
-// POST /jobs → Fetch jobs based on latest parsed resume
-// Replace this whole block where you're reading local JSON:
-const output = await axios.post('https://resume-parser-job-search.onrender.com/parse-resume', formData);
-
-// Instead, just do this to get the latest parsed resume data:
+// POST /jobs → Receives parsed JSON from frontend, fetches matching jobs from Jooble
 app.post('/jobs', async (req, res) => {
   try {
-    // Ideally you'd pass a resume again or use stored ID/session, but for now we'll simulate
-    const parsedData = req.body; // expect parsed data to be sent from frontend
+    const parsedData = req.body; // parsed resume JSON sent from frontend
 
-    let keywords = 'developer';
+    let keywords = 'developer'; // fallback keyword
     if (parsedData.skills && parsedData.skills.length > 0) {
       keywords = parsedData.skills.join(', ');
     }
