@@ -1,8 +1,11 @@
 // src/components/Jobs.jsx
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { useLocation } from 'react-router-dom';
 
 const Jobs = () => {
+  const location = useLocation();
+  const parsedData = location.state?.parsedData || {};
   const [jobs, setJobs] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
@@ -10,8 +13,10 @@ const Jobs = () => {
   useEffect(() => {
     const fetchJobs = async () => {
       try {
-        const response = await axios.post(`${import.meta.env.VITE_JOBS_API}/jobs`);
-
+const response = await axios.post(
+  `${import.meta.env.VITE_JOBS_API}/jobs`,
+  parsedData // send parsed resume data
+);
         setJobs(response.data || []);
       } catch (err) {
         console.error("Failed to fetch jobs:", err);

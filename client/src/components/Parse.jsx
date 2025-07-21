@@ -141,7 +141,7 @@ const Parse = () => {
               Download JSON
             </button>
             <button
-              onClick={() => navigate('/jobs')}
+              onClick={() => navigate('/jobs', { state: { parsedData } })}
               className="bg-pink-600 hover:bg-pink-700 text-white py-2 px-5 rounded-lg shadow-md transition font-semibold"
             >
               Search Jobs
