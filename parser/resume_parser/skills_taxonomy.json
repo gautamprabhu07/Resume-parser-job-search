@@ -1,0 +1,89 @@
+{
+  "python": ["py"],
+  "java": [],
+  "cpp": ["c++"],
+  "c": [],
+  "csharp": ["c#", "c sharp"],
+  "javascript": ["js", "ecmascript"],
+  "typescript": ["ts"],
+
+  "react": ["reactjs", "react.js"],
+  "angular": ["angularjs", "angular.js"],
+  "vue": ["vuejs", "vue.js"],
+  "nextjs": ["next.js", "next"],
+
+  "nodejs": ["node.js", "node"],
+  "express": ["express.js"],
+  "flask": [],
+  "django": [],
+  "fastapi": [],
+
+  "machine learning": ["ml"],
+  "deep learning": ["dl"],
+  "artificial intelligence": ["ai"],
+  "natural language processing": ["nlp"],
+  "computer vision": [],
+
+  "tensorflow": ["tf"],
+  "pytorch": ["torch"],
+  "scikit-learn": ["sklearn"],
+
+  "data science": [],
+  "data analysis": ["data analytics"],
+  "pandas": [],
+  "numpy": [],
+  "matplotlib": [],
+  "seaborn": [],
+
+  "sql": [],
+  "mysql": [],
+  "postgresql": ["postgres"],
+  "mongodb": ["mongo"],
+  "redis": [],
+
+  "html": ["html5"],
+  "css": ["css3"],
+  "tailwind css": ["tailwind"],
+  "bootstrap": [],
+
+  "docker": ["dockerfile"],
+  "kubernetes": ["k8s"],
+  "aws": ["amazon web services"],
+  "azure": ["microsoft azure"],
+  "gcp": ["google cloud platform"],
+
+  "linux": ["unix"],
+  "git": [],
+  "github": [],
+  "gitlab": [],
+
+  "rest api": ["restful api", "rest"],
+  "graphql": [],
+  "microservices": ["microservice architecture"],
+
+  "devops": [],
+  "ci-cd": ["continuous integration", "continuous deployment"],
+
+  "software testing": ["unit testing", "integration testing"],
+  "jest": [],
+  "pytest": [],
+  "selenium": [],
+
+  "operating systems": [],
+  "computer networks": [],
+  "database management systems": ["dbms"],
+
+  "object oriented programming": ["oop"],
+  "data structures": ["dsa"],
+  "algorithms": [],
+
+  "agile methodology": ["agile", "scrum"],
+  "jira": [],
+  "postman": [],
+
+  "json web token": ["jwt"],
+  "socket.io": ["websocket", "websockets"],
+
+  "stripe api": ["stripe"],
+  "payment gateways": ["payment integration"]
+}

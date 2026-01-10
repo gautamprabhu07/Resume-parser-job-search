@@ -1,0 +1,133 @@
+{
+    "name": {
+        "value": "PRASANNA BHAT",
+        "confidence": 0.7
+    },
+    "primary_email": {
+        "value": "prasannabhat345@gmail.com",
+        "confidence": 0.95
+    },
+    "primary_phone": {
+        "value": "+917204730396",
+        "confidence": 0.9
+    },
+    "skills": [
+        {
+            "value": "artificial intelligence",
+            "confidence": 0.8
+        },
+        {
+            "value": "bootstrap",
+            "confidence": 0.8
+        },
+        {
+            "value": "css",
+            "confidence": 0.8
+        },
+        {
+            "value": "git",
+            "confidence": 0.8
+        },
+        {
+            "value": "github",
+            "confidence": 0.8
+        },
+        {
+            "value": "html",
+            "confidence": 0.8
+        },
+        {
+            "value": "javascript",
+            "confidence": 0.8
+        },
+        {
+            "value": "machine learning",
+            "confidence": 0.8
+        },
+        {
+            "value": "mongodb",
+            "confidence": 0.8
+        },
+        {
+            "value": "nextjs",
+            "confidence": 0.8
+        },
+        {
+            "value": "react",
+            "confidence": 0.8
+        },
+        {
+            "value": "tailwind css",
+            "confidence": 0.8
+        }
+    ],
+    "experience": [
+        {
+            "title": "○ Collaborating with back-end developers to integrate user interface elements into applications.",
+            "company": null,
+            "start_year": null,
+            "end_year": null,
+            "years": null,
+            "responsibilities": [
+                "WEB DEVELOPER INTERN | Thapy | LINK | CERTIFICATE | LOR",
+                "May 24-October 24",
+                "○ Collaborated with 3 developers to create React dashboards for users and therapists.",
+                "○ Used GitHub for version control and team collaboration, ensuring efficient communication and workflow.",
+                "○ Integrated backend systems to enhance the functionality and performance of the dashboards.",
+                "○ Designed and implemented over 30 web pages and more than 60 reusable components.",
+                "WEB DEVELOPER INTERN | Samsung R&D, Bangalore | LINK",
+                "November 24-Current"
+            ],
+            "confidence": 0.6
+        },
+        {
+            "title": "○ Worked with ML and backend developers to build a platform for multi-view image segmentation and correction web-tool.",
+            "company": null,
+            "start_year": null,
+            "end_year": null,
+            "years": null,
+            "responsibilities": [
+                "○ Used React and Tailwind to develop the frontend, enabling image uploads.",
+                "○ Integrated the ML model and backend to output segmented images based on user uploads.",
+                "○ Developed a responsive, user-friendly website for seamless image processing.",
+                "FULLSTACK DEVELOPER INTERN | Eventory | LINK",
+                "January 24-Current",
+                "○ Working with the development team to build and enhance various pages in the dashboard and user profiles.",
+                "○ Utilizing Next.js, Tailwind CSS, and MongoDB to develop dynamic, responsive web pages.",
+                "○ Implemented features for improved user interaction and efficient data handling in the platform.",
+                "○ Ensured seamless user experience and optimized performance across the application.",
+                "Portfolio Website | LINK",
+                "March 2024",
+                "○ Developed using Next.js and Tailwind CSS.",
+                "○ Ensured responsive design for both desktop and mobile devices.",
+                "○ About page with animated skills overview and Projects section featuring GitHub and deployment links.",
+                "Website for Nara Constructions | LINK",
+                "April 2024"
+            ],
+            "confidence": 0.6
+        }
+    ],
+    "education": [],
+    "language": "en",
+    "name_flat": "PRASANNA BHAT",
+    "emails": [
+        "prasannabhat345@gmail.com"
+    ],
+    "phones": [
+        "+917204730396"
+    ],
+    "skills_flat": [
+        "artificial intelligence",
+        "bootstrap",
+        "css",
+        "git",
+        "github",
+        "html",
+        "javascript",
+        "machine learning",
+        "mongodb",
+        "nextjs",
+        "react",
+        "tailwind css"
+    ]
+}

@@ -1,0 +1,211 @@
+{
+    "name": {
+        "value": "GAUTAM",
+        "confidence": 0.9
+    },
+    "primary_email": {
+        "value": "gautamprabhumit@gmail.com",
+        "confidence": 0.95
+    },
+    "primary_phone": {
+        "value": "1318073870925",
+        "confidence": 0.9
+    },
+    "skills": [
+        {
+            "value": "algorithms",
+            "confidence": 0.8
+        },
+        {
+            "value": "angular",
+            "confidence": 0.9
+        },
+        {
+            "value": "artificial intelligence",
+            "confidence": 0.8
+        },
+        {
+            "value": "bootstrap",
+            "confidence": 0.9
+        },
+        {
+            "value": "c",
+            "confidence": 0.9
+        },
+        {
+            "value": "css",
+            "confidence": 0.9
+        },
+        {
+            "value": "data structures",
+            "confidence": 0.8
+        },
+        {
+            "value": "database management systems",
+            "confidence": 0.8
+        },
+        {
+            "value": "docker",
+            "confidence": 0.9
+        },
+        {
+            "value": "express",
+            "confidence": 0.9
+        },
+        {
+            "value": "flask",
+            "confidence": 0.8
+        },
+        {
+            "value": "git",
+            "confidence": 0.9
+        },
+        {
+            "value": "github",
+            "confidence": 0.9
+        },
+        {
+            "value": "html",
+            "confidence": 0.9
+        },
+        {
+            "value": "java",
+            "confidence": 0.9
+        },
+        {
+            "value": "javascript",
+            "confidence": 0.9
+        },
+        {
+            "value": "json web token",
+            "confidence": 0.8
+        },
+        {
+            "value": "linux",
+            "confidence": 0.9
+        },
+        {
+            "value": "mongodb",
+            "confidence": 0.9
+        },
+        {
+            "value": "mysql",
+            "confidence": 0.9
+        },
+        {
+            "value": "natural language processing",
+            "confidence": 0.9
+        },
+        {
+            "value": "nextjs",
+            "confidence": 0.9
+        },
+        {
+            "value": "nodejs",
+            "confidence": 0.9
+        },
+        {
+            "value": "object oriented programming",
+            "confidence": 0.8
+        },
+        {
+            "value": "operating systems",
+            "confidence": 0.9
+        },
+        {
+            "value": "postgresql",
+            "confidence": 0.9
+        },
+        {
+            "value": "postman",
+            "confidence": 0.9
+        },
+        {
+            "value": "python",
+            "confidence": 0.9
+        },
+        {
+            "value": "react",
+            "confidence": 0.9
+        },
+        {
+            "value": "rest api",
+            "confidence": 0.8
+        },
+        {
+            "value": "socket.io",
+            "confidence": 0.8
+        },
+        {
+            "value": "stripe api",
+            "confidence": 0.8
+        },
+        {
+            "value": "tailwind css",
+            "confidence": 0.9
+        },
+        {
+            "value": "typescript",
+            "confidence": 0.9
+        }
+    ],
+    "experience": [],
+    "education": [
+        {
+            "degree_raw": "bachelor of technology",
+            "line": "Bachelor of Technology - Computer Science (CGPA: 8.77)",
+            "graduation_year": null,
+            "confidence": 0.7
+        },
+        {
+            "degree_raw": "be",
+            "line": "Embedded Systems",
+            "graduation_year": null,
+            "confidence": 0.7
+        }
+    ],
+    "language": "en",
+    "name_flat": "GAUTAM",
+    "emails": [
+        "gautamprabhumit@gmail.com"
+    ],
+    "phones": [
+        "1318073870925"
+    ],
+    "skills_flat": [
+        "algorithms",
+        "angular",
+        "artificial intelligence",
+        "bootstrap",
+        "c",
+        "css",
+        "data structures",
+        "database management systems",
+        "docker",
+        "express",
+        "flask",
+        "git",
+        "github",
+        "html",
+        "java",
+        "javascript",
+        "json web token",
+        "linux",
+        "mongodb",
+        "mysql",
+        "natural language processing",
+        "nextjs",
+        "nodejs",
+        "object oriented programming",
+        "operating systems",
+        "postgresql",
+        "postman",
+        "python",
+        "react",
+        "rest api",
+        "socket.io",
+        "stripe api",
+        "tailwind css",
+        "typescript"
+    ]
+}
